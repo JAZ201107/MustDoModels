@@ -58,4 +58,4 @@ class Adam(nn.Module):
         p_lr = self.lr / (torch.sqrt(p_2nd_momentum) + self.eps)
         p_update = -p_lr * p_momentum
 
-        p.data.add_(p_update)
+        p.add_(p_update)
