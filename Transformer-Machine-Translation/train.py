@@ -20,7 +20,7 @@ def greedy_decode(model, src, src_mask, tokenizer_src, tokenizer_tgt, max_len):
 
         decoder_input_mask = mask(decoder_input.size(1)).to(device)
         # calculate output
-        out = model.decode(encoder_output, source_mask, decoder_input, decoder_mask)
+        out = model.decode(encoder_output, src_mask, decoder_input, decoder_input_mask)
 
         # get next token
         prob = model.project(out[:, -1])
@@ -28,7 +28,7 @@ def greedy_decode(model, src, src_mask, tokenizer_src, tokenizer_tgt, max_len):
         decoder_input = torch.cat(
             [
                 decoder_input,
-                torch.empty(1, 1).type_as(source).fill_(next_word.item()).to(device),
+                torch.empty(1, 1).type_as(src).fill_(next_word.item()).to(device),
             ],
             dim=1,
         )

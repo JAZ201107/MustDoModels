@@ -23,7 +23,6 @@ class Adam(nn.Module):
 
         self.param_step = {p: 0 for p in self.params}
         self.param_momentum = {p: torch.zeros_like(p.data) for p in self.params}
-
         self.param_2nd_momentum = {p: torch.zeros_like(p.data) for p in self.params}
 
     def zero_grad(self):

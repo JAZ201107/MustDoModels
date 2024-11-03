@@ -71,12 +71,12 @@ class Encoder(nn.Module):
 
 
 class EncoderLayer(nn.Module):
-    def __init__(self, size, self_attn, feed_forward, droptout):
+    def __init__(self, size, self_attn, feed_forward, dropout):
         super().__init__()
 
         self.self_attn = self_attn
         self.feed_forward = feed_forward
-        self.sublayers = clones(SublayerConnection(size, droptout), 2)
+        self.sublayers = clones(SublayerConnection(size, dropout), 2)
         self.size = size
 
     def forward(self, x, mask):
