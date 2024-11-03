@@ -6,11 +6,11 @@ What is planning is:
 
 * Architecture 
 
-  - [ ] **Transformer** on Machine Translation:
+  - [x] [**Transformer** on Machine Translation](https://github.com/JAZ201107/MustDoModels/tree/main/Transformer-Machine-Translation):
 
-  - [ ] **Vision Transformer** on CIFAR-10: Image Classification:
+  - [ ] [**Vision Transformer** on CIFAR-10: Image Classification](https://github.com/JAZ201107/MustDoModels/tree/main/ViT-Cifar10):
 
-  - [ ] **CLIP**: 
+  - [ ] [**CLIP**](https://github.com/JAZ201107/MustDoModels/tree/main/CLIP): 
 
   - [ ] **Attention U-Net** on Medical Image Segmentation: 
   - [ ] mini-**BERT**:
